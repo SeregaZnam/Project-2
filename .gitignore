@@ -1,0 +1,17 @@
+#system files
+.DS_Store
+Thumbs.db
+#archives
+*.zip
+*.rar
+*.7z
+
+#ide directories
+.idea
+.netbeans
+
+#psd files
+*.psd
+
+#gulp files
+node_modules/

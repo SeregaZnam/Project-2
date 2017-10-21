@@ -1,0 +1,26 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "author": "SeregaZnam",
+  "description": "build project",
+  "license": "none",
+  "repository": "https://github.com/SeregaZnam/Project-2.git",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-csslint-less-reporter": "^0.2.0",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-htmlincluder": "^0.1.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less-reporter": "0.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.2.1",
+    "pump": "^1.0.2"
+  }
+}
