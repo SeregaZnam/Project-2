@@ -1,0 +1,32 @@
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1170px;
+}
+
+.row {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.col {
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.grid(xs, 0);
+@media (min-width: @phone-width){
+	.grid(sm, @phone-cell-padding);
+}
+
+@media (min-width: @tablet-width){
+	.grid(md, @tablet-cell-padding);
+}
+
+@media (min-width: @full-width){
+	.grid(lg, @full-cell-padding);
+}

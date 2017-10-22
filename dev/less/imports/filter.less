@@ -1,0 +1,21 @@
+.tab {
+	text-align: center;
+	li {
+		.inline-block;
+		margin-bottom: 30px;
+		width: 100% - (100 / 12 * 2);
+		@media screen and (min-width: @tablet-width) {
+			width: 165px;
+			margin-bottom: 0;
+			margin-left: 30px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		&.active {
+			.btn {
+				background-color: @activeColor;
+			}
+		}
+	}
+}

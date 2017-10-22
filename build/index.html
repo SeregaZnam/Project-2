@@ -7,6 +7,114 @@
 	<link rel="stylesheet" type="text/css" href="css/general.css">
 </head>
 <body>
-	<div class="header"></div>
+	<div class="header">
+	<div class="header__button">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="header__actions">
+		<span class="icon icon-phone"></span>
+		<span class="icon icon-email"></span>
+	</div>
+	<a href="#" class="header__logo"><img src="img/icon-logo.png" alt="logo"></a>
+	<ul class="header__nav">
+		<li>
+			<a href="#" class="header__nav_item">Каталог</a>
+		</li>
+		<li>
+			<a href="#" class="header__nav_item">Услуги</a>
+		</li>
+		<li>
+			<a href="#" class="header__nav_item">Технология строительства</a>
+		</li>
+		<li>
+			<a href="#" class="header__nav_item">Контакты</a>
+		</li>
+	</ul>
+</div>
+	<div class="fullHeight firstSection">
+	<div class="fullHeight-wrap valign">
+		<div class="valign-container">
+			<div class="container">
+				<div class="row">
+					<div class="col xs-12 sm-12 md-5 lg-5 text-center">
+						<img src="img/biggest-logo.png" alt="">
+						<p class="company-name">Новый Дом</p>
+					</div>
+					<div class="col xs-12 sm-12 md-7 lg-7 company">
+						<p class="company-title">Самое честное агенство</p>
+						<p class="company-slogan">Мы подберем дом Вашей мечты в кратчайщие сроки и по приемлемой цене!</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col xs-12 sm-12 md-8 offset-md-1 lg-4 offset-lg-2">
+						<a href="#" class="btn btn-default btn-full">Перейти к каталогу</a>
+					</div>
+					<div class="col xs-12 sm-12 md-8 offset-md-1 lg-4 offset-lg-2">
+						<a href="#" class="btn btn-default btn-full">Наши услуги</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="section section-blue">
+	<div class="container">
+		<p class="section-title">Каталог</p>
+		<ul class="tab btn-full">
+			<li class="active"><a href="#" class="btn btn-tab btn-full">Частный сектор</a></li>
+			<li><a href="#" class="btn btn-tab btn-full">Квартиры</a></li>
+			<li><a href="#" class="btn btn-tab btn-full">Офисы</a></li>
+		</ul>
+		<div class="row">
+			<div class="col xs-12 sm-12 md-10 offset-md-1 lg-6">
+				<form action="">
+					<div class="form-group">
+						<label class="label" for="direction">Направление</label>
+						<select class="input" id="direction">
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="label" for="place">Населенный пункт</label>
+						<select class="input" id="place">
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</div>
+					<div class="additional">
+						<div class="form-group">
+							<label for="range_houseArea" class="label">Площадь дома</label>
+							<input type="text" id="range_houseArea">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col lg-6 hidden-xs-sm-md">
+				
+			</div>
+		</div>
+	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/fullHeight.js"></script>
+	<script>
+		$('.fullHeight').fullHeight();
+		$('#range_houseArea').ionRangeSlider({
+			type: "double",
+			min: 0,
+			max: 1000,
+			postfix: "m2"
+		});
+	</script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+.inline-block(@va: top) {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.iconBack(@iconName) {
+	background: url(~'@{pathToIcons}@{iconName}.png') no-repeat center;
+}
+
+.grid(@name, @pad, @columnNum: 1) when (@columnNum <= @columnCount) {
+	.@{name}-@{columnNum}{
+		width: 100% / @columnCount * @columnNum;
+		padding: 0 @pad;
+	}
+
+	.grid(@name, @pad, @columnNum + 1);
+}
+
+@media (min-width: @tablet-width) {
+	.offset-md-1 {
+		left: 100% / @columnCount * 1;
+	}
+}
+
+@media (min-width: @full-width) {
+	.offset-lg-2 {
+		left: 100% / @columnCount * 2;
+	}
+}

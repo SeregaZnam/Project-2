@@ -8,5 +8,19 @@
 </head>
 <body>
 	<!--#insert file="includes/-header.html" -->
+	<!--#insert file="includes/-firstSection.html" -->
+	<!--#insert file="includes/-filter.html" -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/fullHeight.js"></script>
+	<script>
+		$('.fullHeight').fullHeight();
+		$('#range_houseArea').ionRangeSlider({
+			type: "double",
+			min: 0,
+			max: 1000,
+			postfix: "m2"
+		});
+	</script>
 </body>
 </html>

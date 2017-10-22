@@ -2,4 +2,133 @@
 @import "imports/_mixins";
 @import "imports/fonts";
 @import "imports/reset";
+@import "imports/icons";
+@import "imports/filter";
+@import "imports/ion.rangeSlider";
+@import "imports/ion.rangeSlider.skinHTML5";
+@import "imports/grid";
+
+body {
+	font-family: @regular-fontFamily;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.btn {
+	border: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: @whiteColor;
+	padding: 10px 20px;
+	font-size: @button-fontSize;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+	background-size: 200%;
+	background-position: 100%;
+	transition: background-position 0.5s ease;
+	&:hover {
+		background-position: 0;
+	}
+	a& {
+		display: inline-block;
+	}
+	&-full {
+		box-sizing: border-box;
+		width: 100%;
+	}
+	&-default {
+		background-color: @secondColor;
+	}
+	&-tab {
+		background-color: @baseColor;
+		text-transform: none;
+		padding: 10px 0;
+	}
+}
 @import "imports/header";
+
+.fullHeight {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&-wrap {
+		height: 100%;
+		background: linear-gradient(to right, 
+			rgba(255, 255, 255, 0.75) 0%, 
+			rgba(255, 255, 255, 0.9) 25%, 
+			rgba(255, 255, 255, 0.9) 75%, 
+			rgba(255, 255, 255, 0.75) 100%
+		);
+	}
+	&.firstSection {
+		background-image: url(../img/header-image.png);
+	}
+}
+
+.valign {
+	position: relative;
+	height: 100%;
+	&-container {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.text {
+	&-left {
+		text-align: left;
+	}
+	&-right {
+		text-align: right;	
+	}
+	&-center {
+		text-align: center;
+	}
+}
+
+.section {
+	padding: 29px 0;
+	&-blue {
+		background-color: @secondColor;
+		color: @whiteColor;
+	}
+	&-white {
+		background-color: @whiteColor;
+		color: @blackColor;
+	}
+	&-title {
+		text-align: center;
+		font-size: @header-font-size;
+	}
+}
+
+.company {
+	color: @secondColor;
+	text-align: center;
+	padding-top: 22px;
+	@media screen and (min-width: @tablet-width){
+		text-align: left;
+		padding-top: 142px;
+	}
+	&-name {
+		font-family: @regular-fontFamily;
+		color: @secondColor;
+		font-size: @companyName;
+		padding-top: 30px;
+	}
+	&-title {
+		font-size: @companySlogan;
+		margin-bottom: 17px;
+		@media screen and (min-width: @tablet-width){
+			margin-bottom: 50px;
+		}
+	}
+	&-slogan {
+		font-size: @companyDescr;
+	}
+}
