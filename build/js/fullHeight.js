@@ -13,7 +13,7 @@
 			var winHeight = parseInt($(window).height());
 			var parrallaxHeight = parseInt($(el).height());
 			if(winHeight > parrallaxHeight){
-				$(el).height(winHeight+'px');
+				$(el).height(winHeight + 230 +'px');
 			}
 		}
 	}

@@ -14,12 +14,24 @@
 	<script src="js/ion.rangeSlider.min.js"></script>
 	<script src="js/fullHeight.js"></script>
 	<script>
-		$('.fullHeight').fullHeight();
-		$('#range_houseArea').ionRangeSlider({
+		$('.banner').fullHeight();
+		$('#range_price').ionRangeSlider({
+			type: "double",
+			min: 0,
+			max: 100,
+			postfix: "млн"
+		});
+		$('#range_area_house').ionRangeSlider({
+			type: "double",
+			min: 0,
+			max: 500,
+			postfix: "м2"
+		});
+		$('#range_area_sector').ionRangeSlider({
 			type: "double",
 			min: 0,
 			max: 1000,
-			postfix: "m2"
+			postfix: "м2"
 		});
 	</script>
 </body>

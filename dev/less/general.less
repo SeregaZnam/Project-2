@@ -2,11 +2,11 @@
 @import "imports/_mixins";
 @import "imports/fonts";
 @import "imports/reset";
-@import "imports/icons";
-@import "imports/filter";
+@import "imports/sections/filter";
 @import "imports/ion.rangeSlider";
 @import "imports/ion.rangeSlider.skinHTML5";
 @import "imports/grid";
+@import "imports/sections/header";
 
 body {
 	font-family: @regular-fontFamily;
@@ -47,14 +47,13 @@ a {
 		padding: 10px 0;
 	}
 }
-@import "imports/header";
 
-.fullHeight {
+.banner {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	&-wrap {
+	&__wrap {
 		height: 100%;
 		background: linear-gradient(to right, 
 			rgba(255, 255, 255, 0.75) 0%, 
@@ -63,19 +62,93 @@ a {
 			rgba(255, 255, 255, 0.75) 100%
 		);
 	}
-	&.firstSection {
+	&.banner_section {
 		background-image: url(../img/header-image.png);
+		padding-top: 70px;
 	}
 }
 
-.valign {
+.banner__container {
 	position: relative;
 	height: 100%;
-	&-container {
+	&_valign {
 		width: 100%;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+	}
+	&_top {
+		padding-top: 320px;
+		box-sizing: border-box;
+	}
+	&_wrap {
+		box-sizing: border-box;
+	}
+}
+
+.banner__company,
+.company {
+	color: @secondColor;
+	text-align: center;
+	padding-top: 22px;
+	@media screen and (min-width: @tablet-width){
+		text-align: left;
+		padding-top: 142px;
+	}
+	&_name {
+		font-family: @regular-fontFamily;
+		color: @secondColor;
+		font-size: @companyName;
+		padding-top: 30px;
+	}
+	&_title {
+		font-size: @companySlogan;
+		margin-bottom: 17px;
+		@media screen and (min-width: @tablet-width){
+			margin-bottom: 50px;
+		}
+	}
+	&_slogan {
+		font-size: @companyDescr;
+	}
+}
+
+.banner__container_btn {
+	margin-top: 80px;
+	@media screen and (max-width: @tablet-width) {
+		margin-top: 30px;
+	}
+}
+
+.banner__container_down {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: @baseColor;
+	text-align: center;
+	margin-top: 152px;
+	@media screen and (max-width: @tablet-width) {
+		margin-top: 30px;
+	}
+	&:hover {
+		background-color: @activeColor;
+		cursor: pointer;
+	}
+	.icon_down {
+		width: 20px;
+		height: 0px;
+		margin: 0 auto;
+		position: relative;
+		top: 48%;
+		right: 14%;
+		transform: rotate(45deg);
+		border-radius: 5px;
+		border: 3px solid @whiteColor;
+		&:nth-child(2) {
+			transform: rotate(-45deg);
+			top: 35%;
+			left: 16%;
+		}
 	}
 }
 
@@ -88,47 +161,5 @@ a {
 	}
 	&-center {
 		text-align: center;
-	}
-}
-
-.section {
-	padding: 29px 0;
-	&-blue {
-		background-color: @secondColor;
-		color: @whiteColor;
-	}
-	&-white {
-		background-color: @whiteColor;
-		color: @blackColor;
-	}
-	&-title {
-		text-align: center;
-		font-size: @header-font-size;
-	}
-}
-
-.company {
-	color: @secondColor;
-	text-align: center;
-	padding-top: 22px;
-	@media screen and (min-width: @tablet-width){
-		text-align: left;
-		padding-top: 142px;
-	}
-	&-name {
-		font-family: @regular-fontFamily;
-		color: @secondColor;
-		font-size: @companyName;
-		padding-top: 30px;
-	}
-	&-title {
-		font-size: @companySlogan;
-		margin-bottom: 17px;
-		@media screen and (min-width: @tablet-width){
-			margin-bottom: 50px;
-		}
-	}
-	&-slogan {
-		font-size: @companyDescr;
 	}
 }

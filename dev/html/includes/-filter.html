@@ -1,44 +1,52 @@
-<div class="section section-blue">
+<div class="filter">
 	<div class="container">
-		<p class="section-title">Каталог</p>
+		<p class="filter_title">Каталог</p>
 		<ul class="tab btn-full">
 			<li class="active"><a href="#" class="btn btn-tab btn-full">Частный сектор</a></li>
 			<li><a href="#" class="btn btn-tab btn-full">Квартиры</a></li>
 			<li><a href="#" class="btn btn-tab btn-full">Офисы</a></li>
 		</ul>
-		<div class="row">
-			<div class="col xs-12 sm-12 md-10 offset-md-1 lg-6">
+		<div class="filter__data row">
+			<div class="col xs-12 sm-10 md-10 offset-md-1 lg-6">
 				<form action="">
 					<div class="form-group">
-						<label class="label" for="direction">Направление</label>
-						<select class="input" id="direction">
-							<option></option>
-							<option></option>
-							<option></option>
+						<label class="label text-center" for="direction center">Направление</label>
+						<select class="filter__input xs-10 sm-12 md-12 offset-md-1 lg-12" id="direction">
+							<option>Все направления</option>
+							<option>1</option>
+							<option>2</option>
 							<option></option>
 							<option></option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label class="label" for="place">Населенный пункт</label>
-						<select class="input" id="place">
-							<option></option>
+						<label class="label text-center" for="place">Населенный пункт</label>
+						<select class="filter__input xs-10 sm-12 md-12 offset-md-1 lg-12" id="place">
+							<option>Все</option>
 							<option></option>
 							<option></option>
 							<option></option>
 							<option></option>
 						</select>
 					</div>
-					<div class="additional">
+					<div class="filter__additional">
 						<div class="form-group">
-							<label for="range_houseArea" class="label">Площадь дома</label>
-							<input type="text" id="range_houseArea">
+							<label for="range_houseArea" class="label_range text-center">Стоимость, млн руб</label>
+							<input type="text" id="range_price">
+						</div>
+						<div class="form-group">
+							<label for="range_houseArea" class="label_range text-center">Площадь дома, м2</label>
+							<input type="text" id="range_area_house">
+						</div>
+						<div class="form-group">
+							<label for="range_houseArea" class="label_range text-center">Площадь участка, м2</label>
+							<input type="text" id="range_area_sector">
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="col lg-6 hidden-xs-sm-md">
-				
+				<img class="filter__map lg-12" src="../img/map.png" alt="map">
 			</div>
 		</div>
 	</div>
