@@ -26,6 +26,9 @@
 	text-transform: uppercase;
 	padding: 29px 0;
 	height: 857px;
+	@media screen and (max-width: @tablet-width) {
+		height: 1068px;
+	}
 	box-sizing: border-box;
 	background-color: @secondColor;
 	color: @whiteColor;
@@ -89,4 +92,17 @@
 	&:nth-child(3) .label_range {
 		margin: 22px 0 21px 0;
 	}
+}
+
+.filter__btn {
+	margin-top: 9px;
+	@media screen and (max-width: @full-width) {
+		margin-top: 18px;
+	}
+}
+
+.filter__btn_red {
+	display: block;
+	margin: 0 auto;
+	background-color: @activeColor !important;
 }
