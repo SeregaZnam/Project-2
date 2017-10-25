@@ -1,0 +1,41 @@
+.contacts {
+	height: 200px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	@media screen and (max-width: @tablet-width) {
+		height: 239px;
+	}
+}
+
+.contacts__info {
+	height: 30px;
+	text-align: center;
+	font-family: @regular-fontFamily;
+	font-size: @companyDescr;
+	color: @secondColor;
+}
+
+.contacts__phone {
+	width: 550px;
+	height: 59px;
+	background: @baseColor;
+	margin: 17px auto 0;
+	&_img {
+		height: inherit;
+		width: 67px;
+		.iconBack(icon-phone);
+	}
+	&_text {
+		color: @whiteColor;
+		text-transform: uppercase;
+		line-height: 59px;
+		margin-left: 5px;
+	}
+	&_number {
+		width: 233px;
+		height: 50px;
+		line-height: 50px;
+		margin: 5px 0 0 25px;
+		background-color: @whiteColor;
+	}
+}
