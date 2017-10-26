@@ -1,0 +1,127 @@
+.footer {
+	height: 800px;
+	font-family: @regular-fontFamily;
+	font-size: @companyDescr;
+	color: @baseColor;
+	&__section {
+		&:before {
+			width: 100%;
+			height: 277px;
+			display: block;
+			content: '';
+			@media screen and (max-width: @full-width) {
+				display: none;
+			}
+		}
+	}
+	&__block {
+		height: 267px;
+	}
+}
+
+.footer__block_data,
+.footer__block_message {
+	height: inherit;
+	@media screen and (max-width: @full-width) {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media screen and (max-width: @phone-width) {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.footer__block_wrap {
+	width: 100%;
+	height: 40px;
+	&:nth-child(1) {
+		margin-top: 93px;
+		.footer__block_img {
+			height: 42px;
+			.iconBack(phone-save);
+			background-color: @baseColor;
+			border-radius: 5px;
+			width: 68px;
+			float: left;
+		}
+		.footer__block_mail {
+			margin-left: 30px;
+			float: left;
+			text-transform: uppercase;
+		}
+	}
+	&:nth-child(2) {
+		margin-top: 10px;
+		.footer__block_img {
+			height: 42px;
+			.iconBack(mail-save);
+			background-color: @baseColor;
+			border-radius: 5px;
+			width: 68px;
+			float: left;
+		}
+		.footer__block_mail {
+			margin-left: 30px;
+			float: left;
+			font-size: 24px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.text_normal {
+	font-family: 'Calibri';
+	font-size: 30px;
+}
+
+.footer__block_heading {
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	margin-bottom: 24px;
+}
+
+.footer__input_wrap {
+	width: 100%;
+	height: inherit;
+}
+
+.footer__block_name,
+.footer__block_email {
+	width: 48%;
+	height: 43px;
+	border: 3px solid @baseColor;
+}
+
+.footer__block_email {
+	float: right;
+}
+
+.footer__block_area {
+	width: 98%;
+	height: 92px;
+	padding-left: 6px;
+	margin-top: 16px;
+	float: left;
+	border: 3px solid @baseColor;	
+}
+
+::-webkit-input-placeholder {color: @baseColor;}
+::-moz-placeholder          {color: @baseColor;}/* Firefox 19+ */
+:-moz-placeholder           {color: @baseColor;}/* Firefox 18- */
+:-ms-input-placeholder      {color: @baseColor;}
+
+input[placeholder] {
+	text-indent: 20px;
+	font-family: @regular-fontFamily;
+	font-size: 24px;
+}
+
+textarea[placeholder] {
+	text-indent: 15px;
+	font-family: @regular-fontFamily;
+	font-size: 24px;
+}

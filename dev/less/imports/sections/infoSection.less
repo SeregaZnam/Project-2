@@ -1,5 +1,11 @@
 .info {
-	height: 1990px;
+	height: 2100px;
+	@media screen and (max-width: @tablet-width) {
+		height: 3900px;
+	}
+	@media screen and (max-width: @phone-width) {
+		height: 4200px;
+	}
 }
 
 .info__heading {
@@ -16,6 +22,12 @@
 	font-size: @companySlogan;
 	color: @blackColor;
 	margin-top: 29px;
+	@media screen and (max-width: @tablet-width) {
+		height: 730px;
+	}
+	@media screen and (max-width: @phone-width) {
+		height: 800px;
+	}
 	&::after {
 		content: '';
 		display: block;
@@ -24,15 +36,23 @@
 	&_text {
 		font-size: @range-fontSize;
 		line-height: 24px;
+		text-align: justify;
 	}
 	.info__one_section {
 		margin-top: 42px;
 	}
 	.info__two_section {
 		margin-top: 30px;
+		@media screen and (max-width: @tablet-width) {
+			margin-top: 10px;
+		}
 	}
 	.info__three_section {
 		margin-top: 30px;
+		@media screen and (max-width: @tablet-width) {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
 	}
 	&_header {
 		text-align: center;
@@ -43,6 +63,7 @@
 			height: 268px;
 			.iconBack(main-1);
 			margin-top: 44px;
+			margin-right: 15px;
 			@media screen and (max-width: @tablet-width) {
 				height: 369px;
 				.iconBack(main-1-big);
@@ -50,16 +71,52 @@
 		}
 	}
 	&:nth-child(2) {
-		.info__section_header {
-		}
 		.info__section_img {
 			height: 268px;
 			float: right;
 			.iconBack(main-2);
 			margin-top: 44px;
+			margin-left: 15px;
 			@media screen and (max-width: @tablet-width) {
 				height: 369px;
 				.iconBack(main-2-big);
+			}
+		}
+	}
+	&:nth-child(3) {
+		.info__section_img {
+			height: 268px;
+			.iconBack(main-3);
+			margin-top: 44px;
+			margin-right: 15px;
+			@media screen and (max-width: @tablet-width) {
+				height: 369px;
+				.iconBack(main-3-big);
+			}
+		}
+	}
+	&:nth-child(4) {
+		.info__section_img {
+			height: 268px;
+			float: right;
+			.iconBack(main-4);
+			margin-top: 44px;
+			margin-left: 15px;
+			@media screen and (max-width: @tablet-width) {
+				height: 369px;
+				.iconBack(main-4-big);
+			}
+		}
+	}
+	&:nth-child(5) {
+		.info__section_img {
+			height: 268px;
+			.iconBack(main-5);
+			margin-top: 44px;
+			margin-right: 15px;
+			@media screen and (max-width: @tablet-width) {
+				height: 369px;
+				.iconBack(main-5-big);
 			}
 		}
 	}
