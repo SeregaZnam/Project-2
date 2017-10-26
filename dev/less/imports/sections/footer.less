@@ -87,6 +87,7 @@
 .footer__input_wrap {
 	width: 100%;
 	height: inherit;
+	text-align: center;
 }
 
 .footer__block_name,
@@ -94,6 +95,10 @@
 	width: 48%;
 	height: 43px;
 	border: 3px solid @baseColor;
+}
+
+.footer__block_name {
+	float: left;
 }
 
 .footer__block_email {
@@ -124,4 +129,19 @@ textarea[placeholder] {
 	text-indent: 15px;
 	font-family: @regular-fontFamily;
 	font-size: 24px;
+}
+
+.footer__block_btn {
+	font-family: @regular-fontFamily;
+	font-size: @catalogTitle-fontSize;
+	margin-top: 15px;
+	border: none;
+	width: 460px;
+	height: 47px;
+	background-color: @baseColor;
+	text-transform: uppercase;
+	color: @whiteColor;
+	@media screen and (max-width: @tablet-width) {
+		width: 100%;
+	}
 }

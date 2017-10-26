@@ -1348,12 +1348,16 @@ a img {
 .footer__input_wrap {
   width: 100%;
   height: inherit;
+  text-align: center;
 }
 .footer__block_name,
 .footer__block_email {
   width: 48%;
   height: 43px;
   border: 3px solid #3e91c9;
+}
+.footer__block_name {
+  float: left;
 }
 .footer__block_email {
   float: right;
@@ -1389,6 +1393,22 @@ textarea[placeholder] {
   text-indent: 15px;
   font-family: 'regular';
   font-size: 24px;
+}
+.footer__block_btn {
+  font-family: 'regular';
+  font-size: 24px;
+  margin-top: 15px;
+  border: none;
+  width: 460px;
+  height: 47px;
+  background-color: #3e91c9;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  .footer__block_btn {
+    width: 100%;
+  }
 }
 body {
   font-family: 'regular';
